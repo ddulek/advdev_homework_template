@@ -37,3 +37,9 @@ USER root
 RUN yum -y install skopeo apb &&     yum clean all
 USER 1001
 ENDL
+
+
+oc new-build -n ${GUID}-jenkins https://github.com/ddulek/advdev_homework_template.git --context-dir=MLBParks --name mlbparks-pipeline
+oc new-build -n ${GUID}-jenkins https://github.com/ddulek/advdev_homework_template.git --context-dir=ParksMap --name parksmap-pipeline
+oc new-build -n ${GUID}-jenkins https://github.com/ddulek/advdev_homework_template.git --context-dir=Nationalparks --name nationalparks-pipeline
+
