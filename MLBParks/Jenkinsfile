@@ -9,20 +9,20 @@ podTemplate(
   containers: [
     containerTemplate(
       name: "jnlp",
-      image: "docker-registry.default.svc:5000/${GUID}-jenkins/jenkins-slave-appdev",
+      image: "docker-registry.default.svc:5000/4820-jenkins/jenkins-slave-appdev",
       resourceRequestMemory: "1Gi",
       resourceLimitMemory: "2Gi"
     )
   ]
 ) {
   node('skopeo-pod') {
-    echo "GUID: ${GUID}"
-    echo "CLUSTER: ${CLUSTER}"
+    echo "GUID: 4820"
+    echo "CLUSTER: na39.openshift.opentlc.com"
 
-    // Your Pipeline Code goes here. Make sure to use the ${GUID} and ${CLUSTER} parameters where appropriate
+    // Your Pipeline Code goes here. Make sure to use the 4820 and na39.openshift.opentlc.com parameters where appropriate
     // You need to build the application in directory `MLBParks`.
     // Also copy "../nexus_settings.xml" to your build directory
-    // and replace 'GUID' in the file with your ${GUID} to point to >your< Nexus instance
+    // and replace 'GUID' in the file with your 4820 to point to >your< Nexus instance
  
   }
 }
