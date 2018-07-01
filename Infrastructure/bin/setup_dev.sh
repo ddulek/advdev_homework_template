@@ -13,4 +13,6 @@ echo "Setting up Parks Development Environment in project ${GUID}-parks-dev"
 
 # To be Implemented by Student
 oc policy add-role-to-user edit system:serviceaccount:${GUID}-jenkins:jenkins -n $GUID-parks-dev
-oc create -f ../template/mongodb.yaml -n $GUID-parks-dev
+pwd
+ls
+oc create -f Infrastructure/template/mongodb.yaml -n $GUID-parks-dev
