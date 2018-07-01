@@ -20,8 +20,11 @@ podTemplate(
     // You need to build the application in directory `MLBParks`.
     // Also copy "../nexus_settings.xml" to your build directory
     // and replace 'GUID' in the file with your 4820 to point to >your< Nexus instance
-sh "ls;ls ..;pwd" 
-    sh "mvn -s ../nexus_settings.xml clean package -DskipTests=true"
+
+    git https://github.com/ddulek/advdev_homework_template.git
+    dir ('MLBParks') {
+      sh "mvn -s ../nexus_settings.xml clean package -DskipTests=true"
+    }
 
   }
 }
