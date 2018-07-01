@@ -21,8 +21,10 @@ podTemplate(
     // Also copy "../nexus_settings.xml" to your build directory
     // and replace 'GUID' in the file with your 4820 to point to >your< Nexus instance
 
-    git https://github.com/ddulek/advdev_homework_template.git
+    git 'https://github.com/ddulek/advdev_homework_template.git'
+sh "ls;pwd"
     dir ('MLBParks') {
+sh "ls;pwd"
       sh "mvn -s ../nexus_settings.xml clean package -DskipTests=true"
     }
 
