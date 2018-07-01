@@ -15,5 +15,5 @@ echo "Setting up Parks Production Environment in project ${GUID}-parks-prod"
 # To be Implemented by Student
 
 oc policy add-role-to-user edit system:serviceaccount:${GUID}-jenkins:jenkins -n ${GUID}-parks-prod
-oc create -f ../template/mongodb.yaml -n ${GUID}-parks-prod
+oc create -f Infrastructure/templates/mongodb.yaml -n ${GUID}-parks-prod
 oc scale sts/mongodb --replicas=3 -n ${GUID}-parks-prod
