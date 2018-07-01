@@ -21,6 +21,8 @@ podTemplate(
     // Also copy "../nexus_settings.xml" to your build directory
     // and replace 'GUID' in the file with your 4820 to point to >your< Nexus instance
  
+mvn -s ../nexus_settings.xml clean package -DskipTests=true
+
   }
 }
 
