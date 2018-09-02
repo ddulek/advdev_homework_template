@@ -23,7 +23,7 @@ podTemplate(
     git 'https://github.com/ddulek/advdev_homework_template.git'
     dir ('Nationalparks') {
       sh "mvn -s ../nexus_settings.xml clean package -DskipTests=true"
-
+    }
   }
 }
 
