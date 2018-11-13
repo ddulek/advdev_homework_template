@@ -6,20 +6,20 @@ podTemplate(
   containers: [
     containerTemplate(
       name: "jnlp",
-      image: "docker-registry.default.svc:5000/e717-jenkins/jenkins-slave-appdev",
+      image: "docker-registry.default.svc:5000/f229-jenkins/jenkins-slave-appdev",
       resourceRequestMemory: "1Gi",
       resourceLimitMemory: "2Gi"
     )
   ]
 ) {
   node('skopeo-pod') {
-    echo "GUID: e717"
+    echo "GUID: f229"
     echo "CLUSTER: na39.openshift.opentlc.com"
 
-    // Your Pipeline Code goes here. Make sure to use the e717 and na39.openshift.opentlc.com parameters where appropriate
+    // Your Pipeline Code goes here. Make sure to use the f229 and na39.openshift.opentlc.com parameters where appropriate
     // You need to build the application in directory `MLBParks`.
     // Also copy "../nexus_settings.xml" to your build directory
-    // and replace 'GUID' in the file with your e717 to point to >your< Nexus instance
+    // and replace 'GUID' in the file with your f229 to point to >your< Nexus instance
 
     git 'https://github.com/ddulek/advdev_homework_template.git'
     dir ('MLBParks') {
